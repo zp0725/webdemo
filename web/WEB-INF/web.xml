@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>Test</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/a</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Demo</servlet-name>
+        <servlet-class>com.zp.web.Demo</servlet-class>
+        <!--给某个类加初始化参数-->
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>admin</param-value>
+        </init-param>
+        <!--启动服务器时加载对象,数字越小优先级越高-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Demo</servlet-name>
+        <url-pattern>/demo</url-pattern>
+
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>getStudents</servlet-name>
+        <servlet-class>com.zp.web.GetStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getStudents</servlet-name>
+        <url-pattern>/getStudent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddStudents</servlet-name>
+        <servlet-class>com.zp.web.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddStudents</servlet-name>
+        <url-pattern>/addStudent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DoAddStudents</servlet-name>
+        <servlet-class>com.zp.web.DoAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DoAddStudents</servlet-name>
+        <url-pattern>/doAddStudent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>com.zp.web.DeleteServlet </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>com.zp.web.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>doUpdate</servlet-name>
+        <servlet-class>com.zp.web.DoUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doUpdate</servlet-name>
+        <url-pattern>/doUpdate</url-pattern>
+    </servlet-mapping>
+</web-app>
